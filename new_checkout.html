@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Sumbscribe-ME | Get Access to all our subscriptions</title>
+
+    <link
+      href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+      rel="stylesheet"
+      id="bootstrap-css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  </head>
+
+  <body>
+    <div class="container">
+      <!-- Card 1 -->
+      <div class="card">
+        <div class="card__info" style="background-image: '.\images\basic.png'">
+          <h2 class="card__name">BASIC</h2>
+          <p class="card__price" style="color: var(--color05)">
+            $20.00 <span class="card__priceSpan">/month</span>
+          </p>
+        </div>
+        <div class="card__content" style="border-color: var(--color05)">
+          <div class="card__rows">
+            <p class="card__row">View on Phone/Tablet</p>
+            <p class="card__row">Access to all content</p>
+            <p class="card__row">View on 1 screen at a time</p>
+            <p class="card__row">480p Quality</p>
+          </div>
+          <form action="/create-checkout-session" method="POST">
+            <!-- Add a hidden field with the lookup_key of your Price -->
+            <input
+              type="hidden"
+              name="lookup_key"
+              value="{{PRICE_LOOKUP_KEY}}"
+            />
+            <button id="checkout-and-portal-button" type="submit">
+              Checkout
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="card">
+        <div class="card__info" style="background-image: ''">
+          <h2 class="card__name">STANDARD</h2>
+          <p class="card__price" style="color: var(--color06)">
+            $50.00 <span class="card__priceSpan">/month</span>
+          </p>
+        </div>
+        <div class="card__content" style="border-color: var(--color06)">
+          <div class="card__rows">
+            <p class="card__row">Phone/Tablet/TV screen</p>
+            <p class="card__row">Access to all content</p>
+            <p class="card__row">View on 2 screens</p>
+            <p class="card__row">1080p</p>
+          </div>
+          <form action="/create-checkout-session" method="POST">
+            <!-- Add a hidden field with the lookup_key of your Price -->
+            <input
+              type="hidden"
+              name="lookup_key"
+              value="{{PRICE_LOOKUP_KEY}}"
+            />
+            <button id="checkout-and-portal-button" type="submit">
+              Checkout
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="card">
+        <div class="card__info">
+          <h2 class="card__name">PREMIUM</h2>
+          <p class="card__price" style="color: var(--color12)">
+            $100.00 <span class="card__priceSpan">/month</span>
+          </p>
+        </div>
+        <div class="card__content" style="border-color: var(--color07)">
+          <div class="card__rows">
+            <p class="card__row">Phone+Tablet+TV Screen</p>
+            <p class="card__row">Access to all+extra content</p>
+            <p class="card__row">View on 4 screens</p>
+            <p class="card__row">4k Quality</p>
+          </div>
+          <form action="/create-checkout-session" method="POST">
+            <!-- Add a hidden field with the lookup_key of your Price -->
+            <input
+              type="hidden"
+              name="lookup_key"
+              value="{{PRICE_LOOKUP_KEY}}"
+            />
+            <button id="checkout-and-portal-button" type="submit">
+              Checkout
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
